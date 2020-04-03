@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body{
+            margin:0%;
+            padding:0%;
+            font-family:sans-serif;
+            background: url("book1.png");
+
+        }
+        .box{
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+        .box h1 {
+            color: #FFD026;
+            text-align: center;
+
+            fort-weight: 500;
+        }
+        .box input[type ="text"],.box input[type="password"] {
+            border :0;
+            background: none;
+            display : block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding :14px 10px;
+            width :200px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+            }
+
+
+        .box input[type ="text"]:focus,.box input[type="password"]:focus{
+            width: 280px;
+            border-color:#2ecc71;}
+
+
+        .box input[type = "submit"]{ border :0;
+            background: none;
+            display : block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            padding :14px 60px;
+            outline: none;
+            color: #FFD026;
+            border-radius: 24px;
+            transition: 0.25s;
+
+        }
+
+        .box input[type="submit"] :hover{
+            background:#2ecc71}
+
+
+        .rg_rigth{
+            text-align: center;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="js/bootstrap.min.js"></script>
+<div class="rg_middle">
+<form class="box" action="index.html" method="post">
+    <h1 class="title">BookShelf</h1>
+
+    <input type="text" name="Username"  placeholder="Username" >
+    <input type="password" name="Password" placeholder="Password" >
+    <input type="submit" name="Login" value="Login" id="submit">
+
+
+    <div class="rg_rigth"> <p>没有账号？<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=monline_3_dg&wd=html%E6%8C%89%E9%92%AE%E6%80%8E%E4%B9%88%E8%BD%AC%E8%B7%B3%E9%A1%B5%E9%9D%A2&oq=html%25E6%2580%258E%25E4%25B9%2588%25E8%25BD%25AC%25E8%25B7%25B3%25E9%25A1%25B5%25E9%259D%25A2&rsv_pq=99d9c63900003a1f&rsv_t=3df35J6YdiTmk82obmnzOZd7ujmZa674yTZ%2Fyop3WF2mRU8lWL5igQaj%2FMKFIYLUgZCv&rqlang=cn&rsv_enter=1&rsv_dl=tb&inputT=1713&rsv_sug3=13&rsv_sug1=12&rsv_sug7=000&rsv_sug2=0&rsv_sug4=2357&rsv_sug=1">立即注册</a></p></div>
+</form>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Bookshelf</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">读书</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">书籍<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">经典</a></li>
+                        <li><a href="#">国内</a></li>
+                        <li><a href="#">国外</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">教材</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">小说</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="搜索你想要的书">
+                </div>
+                <button type="submit" class="btn btn-default">确认</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">联系我们</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于我们 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">制作者团队</a></li>
+                        <li><a href="#">关于版本</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+</body>
+
+</html>
